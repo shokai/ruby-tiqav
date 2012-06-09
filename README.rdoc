@@ -2,6 +2,10 @@
 
 * http://github.com/shokai/ruby-tiqav
 
+== INSTALL:
+
+* gem install tiqav
+
 == DESCRIPTION:
 
 Search Images on Tiqav.com
@@ -24,10 +28,6 @@ Search Images on Tiqav.com
 == REQUIREMENTS:
 
 * Ruby 1.8.7+ or 1.9.3+
-
-== INSTALL:
-
-* gem install tiqav
 
 == LICENSE:
 
