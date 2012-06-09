@@ -1,32 +1,37 @@
 = tiqav
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/shokai/ruby-tiqav
 
 == DESCRIPTION:
 
-FIX (describe your package)
-
-== FEATURES/PROBLEMS:
-
-* FIX (list of features or problems)
+Search Images on Tiqav.com
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  images = Tiqav.search 'ちくわ'
+  
+  images.each do |img|
+    puts "(id:#{img.id}) #{img.permalink} => #{img.url}"
+    img.save(img.filename)
+    puts "saved!! => #{img.filename}"
+  end
+  
+  img = Tiqav.random
+  puts img.url
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* Ruby 1.8.7+ or 1.9.3+
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* gem install tiqav
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2012 FIXME full name
+Copyright (c) 2012 Sho Hashimoto
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
