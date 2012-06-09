@@ -8,6 +8,8 @@ Search Images on Tiqav.com
 
 == SYNOPSIS:
 
+  require 'rubygems'
+  require 'tiqav'
   images = Tiqav.search 'ちくわ'
   
   images.each do |img|
