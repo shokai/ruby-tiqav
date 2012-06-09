@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require File.expand_path 'test_helper', File.dirname(__FILE__)
+require 'tmpdir'
 
 class TestTiqav < Test::Unit::TestCase
 
@@ -29,6 +30,14 @@ class TestTiqav < Test::Unit::TestCase
 
   def test_image_filename
     assert @img.filename =~ /.+\.jpe?g/i
+  end
+
+  def test_image_save
+    Dir.mktmpdir do |dir|
+      fpath = File.expand_path @img.filename, dir
+      @img.save(fpath)
+      assert File.exists?(fpath) and File.stat(fpath).size > 0
+    end
   end
 
 end
