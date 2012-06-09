@@ -6,9 +6,9 @@ module Tiqav
 
     def initialize(id)
       @id = id
-      @url = URI.parse "http://tiqav.com/#{filename}"
-      @permalink = URI.parse "http://tiqav.com/#{@id}"
       @filename = "#{@id}.jpg"
+      @url = URI.parse "http://tiqav.com/#{@filename}"
+      @permalink = URI.parse "http://tiqav.com/#{@id}"
     end
 
     def save(fname)
