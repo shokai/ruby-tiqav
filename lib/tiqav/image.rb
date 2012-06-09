@@ -2,28 +2,18 @@
 module Tiqav
 
   class Image
-    attr_reader :id
+    attr_reader :id, :url, :permalink, :filename
 
     def initialize(id)
       @id = id
-    end
-
-    def permalink
-      "http://tiqav.com/#{@id}"
-    end
-
-    def filename
-      "#{@id}.jpg"
-    end
-
-    def url
-      "http://tiqav.com/#{filename}"
+      @url = URI.parse "http://tiqav.com/#{filename}"
+      @permalink = URI.parse "http://tiqav.com/#{@id}"
+      @filename = "#{@id}.jpg"
     end
 
     def save(fname)
-      uri = URI.parse url
-      res = Net::HTTP.start(uri.host, uri.port).
-        request(Net::HTTP::Get.new uri.path)
+      res = Net::HTTP.start(url.host, url.port).
+        request(Net::HTTP::Get.new url.path)
       unless res.code.to_i == 200          
         raise Error, "HTTP Status #{res.code} - #{url}"
       end
@@ -34,9 +24,8 @@ module Tiqav
     end
 
     def exists?
-      uri = URI.parse url
-      case code = Net::HTTP.start(uri.host, uri.port).
-          request(Net::HTTP::Head.new uri.path).
+      case code = Net::HTTP.start(url.host, url.port).
+          request(Net::HTTP::Head.new url.path).
           code.to_i
         when 200
         return true
