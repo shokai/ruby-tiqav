@@ -29,14 +29,15 @@ class TestTiqav < Test::Unit::TestCase
   end
 
   def test_image_filename
-    assert @img.filename =~ /.+\.#{@img.ext}/i
+    assert @img.filename =~ /^.+\.#{@img.ext}$/
   end
 
   def test_image_save
     Dir.mktmpdir do |dir|
       fpath = File.expand_path @img.filename, dir
       @img.save(fpath)
-      assert File.exists?(fpath) and File.stat(fpath).size > 0
+      assert File.exists?(fpath)
+      assert File.stat(fpath).size > 0
     end
   end
 
