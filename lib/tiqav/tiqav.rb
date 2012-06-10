@@ -1,6 +1,6 @@
 require 'net/http'
 require 'uri'
-require 'nokogiri'
+require 'json'
 
 module Tiqav
   class Error < StandardError
