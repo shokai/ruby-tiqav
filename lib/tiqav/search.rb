@@ -1,16 +1,11 @@
 
 module Tiqav
   def self.search(word)
-    uri = URI.parse "http://tiqav.com/search/#{URI.encode word}"
-    res = Net::HTTP.start(uri.host, uri.port).request(Net::HTTP::Get.new uri.path)
+    uri = URI.parse "http://api.tiqav.com/search.json?q=#{URI.encode word}"
+    res = Net::HTTP.start(uri.host, uri.port).request(Net::HTTP::Get.new uri.request_uri)
     raise Error, "HTTP Status #{res.code} at #{uri}" unless res.code.to_i == 200
-    doc = Nokogiri::HTML res.body
-    doc.xpath('//a').map{|a|
-      a['href']
-    }.reject{|a|
-      !(a =~ /^\/[a-zA-Z0-9]+$/)
-    }.map{|a|
-      Tiqav::Image.new a.scan(/([a-zA-Z0-9]+)/)[0][0]
+    JSON.parse(res.body).map{|img|
+      Tiqav::Image.new img[:id], img[:ext]
     }
   end
 

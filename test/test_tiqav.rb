@@ -29,7 +29,7 @@ class TestTiqav < Test::Unit::TestCase
   end
 
   def test_image_filename
-    assert @img.filename =~ /.+\.jpe?g/i
+    assert @img.filename =~ /.+\.#{@img.ext}/i
   end
 
   def test_image_save

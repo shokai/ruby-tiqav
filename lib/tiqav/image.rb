@@ -2,12 +2,13 @@
 module Tiqav
 
   class Image
-    attr_reader :id, :url, :permalink, :filename
+    attr_reader :id, :url, :permalink, :filename, :ext
 
-    def initialize(id)
+    def initialize(id, ext = 'jpg')
       @id = id
-      @filename = "#{@id}.jpg"
-      @url = URI.parse "http://tiqav.com/#{@filename}"
+      @ext = ext
+      @filename = "#{@id}.#{@ext}"
+      @url = URI.parse "http://img.tiqav.com/#{@filename}"
       @permalink = URI.parse "http://tiqav.com/#{@id}"
     end
 
