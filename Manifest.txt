@@ -6,7 +6,7 @@ lib/tiqav.rb
 lib/tiqav/alpha_num.rb
 lib/tiqav/image.rb
 lib/tiqav/search.rb
-lib/tiqav/tiqav.rb
+lib/tiqav/error.rb
 samples/sample.rb
 samples/search.rb
 script/console
