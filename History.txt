@@ -1,3 +1,19 @@
+=== 0.0.5 2012-06-11
+
+* fix require path
+
+=== 0.0.4 2012-06-11
+
+* add function Tiqav.feeling_lucky
+
+=== 0.0.3 2012-06-11
+
+* Tiqav::Image#glitch,thumbnail
+
+=== 0.0.2 2012-06-11
+
+* use http://api.tiqav.com
+
 === 0.0.1 2012-06-09
 
 * Search Images, Random Image.
