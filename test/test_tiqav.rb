@@ -17,7 +17,7 @@ class TestTiqav < Test::Unit::TestCase
   end
 
   def test_image_exists?
-    assert @img.exists? == true
+    assert @img.exists?
   end
 
   def test_image_url
