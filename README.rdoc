@@ -24,6 +24,9 @@ Search Images on Tiqav.com
   
   img = Tiqav.random
   puts img.url
+  puts img.thumbnail
+  puts img.glitch
+
 
 == REQUIREMENTS:
 

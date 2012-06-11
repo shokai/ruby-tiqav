@@ -9,8 +9,10 @@ puts img.exists?
 puts img.url
 
 img = Tiqav.random
-puts img.id
+puts "id : #{img.id}"
 puts img.permalink
 puts img.url
+puts img.thumbnail
+puts img.glitch
 img.save img.filename
 puts "saved!! => #{img.filename}"
