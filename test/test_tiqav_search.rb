@@ -4,12 +4,18 @@ require 'tmpdir'
 
 class TestTiqavSearch < Test::Unit::TestCase
 
-  def setup
-    @imgs = Tiqav.search('ちくわ')
+  def test_search
+    assert Tiqav.search('ちくわ').size > 0
   end
 
-  def test_search
-    assert @imgs.size > 0
+  def test_random
+    r = Tiqav.random
+    assert r.class == Tiqav::Image
+    assert r.id =~ /^[a-zA-Z0-9]+$/
+  end
+
+  def test_feelinkg_lucky
+    assert Tiqav.feeling_lucky('ちくわ').kind_of? URI::HTTP
   end
 
 end

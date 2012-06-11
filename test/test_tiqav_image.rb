@@ -24,6 +24,14 @@ class TestTiqavImage < Test::Unit::TestCase
     assert @img.permalink.kind_of? URI::HTTP
   end
 
+  def test_image_thumbnail
+    assert @img.thumbnail.kind_of? URI::HTTP
+  end
+
+  def test_image_glitch
+    assert @img.glitch.kind_of? URI::HTTP
+  end
+
   def test_image_filename
     assert @img.filename =~ /^.+\.#{@img.ext}$/
   end
