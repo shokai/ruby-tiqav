@@ -7,5 +7,5 @@ require 'tiqav/search'
 require 'tiqav/alpha_num'
 
 module Tiqav
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
 end
