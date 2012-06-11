@@ -5,11 +5,12 @@ require 'tmpdir'
 class TestTiqav < Test::Unit::TestCase
 
   def setup
-    @img = Tiqav.random
+    @imgs = Tiqav.search('ちくわ')
+    @img = @imgs[0]
   end
-  
+
   def test_search
-    assert Tiqav.search('ちくわ').size > 0
+    assert @imgs.size > 0
   end
 
   def test_image_class
