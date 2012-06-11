@@ -17,22 +17,22 @@ class TestTiqavImage < Test::Unit::TestCase
   end
 
   def test_image_url
-    assert @img.url.kind_of? URI::HTTP
+    assert @img.url.kind_of? Addressable::URI
   end
 
   def test_image_permalink
-    assert @img.permalink.kind_of? URI::HTTP
+    assert @img.permalink.kind_of? Addressable::URI
   end
 
   def test_image_thumbnail
-    assert @img.thumbnail.kind_of? URI::HTTP
+    assert @img.thumbnail.kind_of? Addressable::URI
     res = Net::HTTP.start(@img.thumbnail.host, @img.thumbnail.port).
       request(Net::HTTP::Head.new @img.thumbnail.path)
     assert res.code.to_i == 200
   end
 
   def test_image_glitch
-    assert @img.glitch.kind_of? URI::HTTP
+    assert @img.glitch.kind_of? Addressable::URI
     res = Net::HTTP.start(@img.glitch.host, @img.glitch.port).
       request(Net::HTTP::Head.new @img.glitch.path)
     assert res.code.to_i == 200

@@ -14,7 +14,8 @@ $hoe = Hoe.spec 'tiqav' do
   self.developer 'Sho Hashimoto', 'hashimoto@shokai.org'
   # self.post_install_message = 'PostInstall.txt' # TODO remove if post-install message not required
   self.rubyforge_name       = self.name # TODO this is default value
-  self.extra_deps         = [['json','>= 1.5.4']]
+  self.extra_deps         = [['json','>= 1.5.4'],
+                             ['addressable', '>= 2.2.8']]
 
 end
 

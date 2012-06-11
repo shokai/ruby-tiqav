@@ -26,6 +26,8 @@ Search Images on Tiqav.com
   puts img.url
   puts img.thumbnail
   puts img.glitch
+  
+  puts Tiqav.feeling_lucky 'ちくわ'
 
 
 == REQUIREMENTS:

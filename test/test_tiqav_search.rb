@@ -15,7 +15,7 @@ class TestTiqavSearch < Test::Unit::TestCase
   end
 
   def test_feelinkg_lucky
-    assert Tiqav.feeling_lucky('ちくわ').kind_of? URI::HTTP
+    assert Tiqav.feeling_lucky('ちくわ').kind_of? Addressable::URI
   end
 
 end

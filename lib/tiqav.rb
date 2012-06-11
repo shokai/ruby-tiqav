@@ -4,11 +4,12 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'net/http'
 require 'uri'
 require 'json'
+require 'addressable/uri'
 require 'tiqav/error'
 require 'tiqav/image'
 require 'tiqav/search'
 require 'tiqav/alpha_num'
 
 module Tiqav
-  VERSION = '0.0.3'
+  VERSION = '0.0.4'
 end

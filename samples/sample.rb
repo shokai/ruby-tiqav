@@ -16,3 +16,7 @@ puts img.thumbnail
 puts img.glitch
 img.save img.filename
 puts "saved!! => #{img.filename}"
+
+puts Tiqav.feeling_lucky 'ちくわ'
+
+

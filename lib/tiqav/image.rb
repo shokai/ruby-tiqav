@@ -8,10 +8,10 @@ module Tiqav
       @id = id
       @ext = ext
       @filename = "#{@id}.#{@ext}"
-      @url = URI.parse "http://img.tiqav.com/#{@filename}"
-      @permalink = URI.parse "http://tiqav.com/#{@id}"
-      @thumbnail = URI.parse "http://img.tiqav.com/#{@id}.th.#{ext}"
-      @glitch = URI.parse "http://img.tiqav.com/#{@id}.glitch"
+      @url = Addressable::URI.parse "http://img.tiqav.com/#{@filename}"
+      @permalink = Addressable::URI.parse "http://tiqav.com/#{@id}"
+      @thumbnail = Addressable::URI.parse "http://img.tiqav.com/#{@id}.th.#{ext}"
+      @glitch = Addressable::URI.parse "http://img.tiqav.com/#{@id}.glitch"
     end
 
     def save(fname)
