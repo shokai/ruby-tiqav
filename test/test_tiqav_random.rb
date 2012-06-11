@@ -2,7 +2,7 @@
 require File.expand_path 'test_helper', File.dirname(__FILE__)
 require 'tmpdir'
 
-class TestTiqav < Test::Unit::TestCase
+class TestTiqavRandom < Test::Unit::TestCase
 
   def setup
     @img = Tiqav.random

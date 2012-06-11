@@ -2,7 +2,7 @@
 require File.expand_path 'test_helper', File.dirname(__FILE__)
 require 'tmpdir'
 
-class TestTiqav < Test::Unit::TestCase
+class TestTiqavSearch < Test::Unit::TestCase
 
   def setup
     @imgs = Tiqav.search('ちくわ')
