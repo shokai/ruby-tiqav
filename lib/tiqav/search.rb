@@ -5,7 +5,7 @@ module Tiqav
     res = Net::HTTP.start(uri.host, uri.port).request(Net::HTTP::Get.new uri.request_uri)
     raise Error, "HTTP Status #{res.code} at #{uri}" unless res.code.to_i == 200
     JSON.parse(res.body).map{|img|
-      Tiqav::Image.new img[:id], img[:ext]
+      Tiqav::Image.new img['id'], img['ext']
     }
   end
 
