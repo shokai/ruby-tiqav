@@ -14,5 +14,6 @@ script/destroy
 script/generate
 test/test_alpha_num.rb
 test/test_helper.rb
+test/test_tiqav_image.rb
 test/test_tiqav_search.rb
 test/test_tiqav_random.rb
