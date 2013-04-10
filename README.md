@@ -2,7 +2,6 @@ tiqav
 =====
 ruby wrapper for [tiqav.com](http://tiqav.com)
 
-
 * https://github.com/shokai/ruby-tiqav
 * https://rubygems.org/gems/tiqav
 
