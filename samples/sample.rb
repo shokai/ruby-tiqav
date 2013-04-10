@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-$:.unshift File.expand_path 'lib', File.dirname(__FILE__)+'/../'
+$:.unshift File.expand_path '../lib', File.dirname(__FILE__)
 require 'rubygems'
 require 'tiqav'
 
