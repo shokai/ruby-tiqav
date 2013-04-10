@@ -2,10 +2,11 @@
 require File.expand_path 'test_helper', File.dirname(__FILE__)
 require 'tmpdir'
 
-class TestTiqavSearch < Test::Unit::TestCase
+class TestTiqavSearch < MiniTest::Unit::TestCase
 
   def test_search
-    assert Tiqav.search('ちくわ').size > 0
+    imgs = Tiqav.search('ちくわ').size
+    assert imgs.size > 0
   end
 
   def test_random

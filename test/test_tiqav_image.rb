@@ -2,7 +2,7 @@
 require File.expand_path 'test_helper', File.dirname(__FILE__)
 require 'tmpdir'
 
-class TestTiqavImage < Test::Unit::TestCase
+class TestTiqavImage < MiniTest::Unit::TestCase
 
   def setup
     @img = Tiqav::Image.new '3om'

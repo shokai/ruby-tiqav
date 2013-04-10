@@ -1,6 +1,6 @@
 require File.expand_path 'test_helper', File.dirname(__FILE__)
 
-class TestAlphaNum < Test::Unit::TestCase
+class TestAlphaNum < MiniTest::Unit::TestCase
   def setup
   end
 
