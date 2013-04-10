@@ -5,8 +5,9 @@ require 'tmpdir'
 class TestTiqavSearch < MiniTest::Unit::TestCase
 
   def test_search
-    imgs = Tiqav.search('ちくわ').size
+    imgs = Tiqav.search('ちくわ')
     assert imgs.size > 0
+    assert imgs.select{|img| img.class != Tiqav::Image }.size == 0
   end
 
   def test_random

@@ -1,8 +1,6 @@
 require File.expand_path 'test_helper', File.dirname(__FILE__)
 
 class TestAlphaNum < MiniTest::Unit::TestCase
-  def setup
-  end
 
   def test_encode
     assert AlphaNum.encode(365) == '5T'
