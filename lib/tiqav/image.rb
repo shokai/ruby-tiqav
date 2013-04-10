@@ -20,7 +20,7 @@ module Tiqav
       unless res.code.to_i == 200          
         raise Error, "HTTP Status #{res.code} - #{url}"
       end
-      open(fname,'w+') do |f|
+      File.open(fname,'w+') do |f|
         f.write res.body
       end
       fname
