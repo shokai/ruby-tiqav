@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tiqav (0.0.5)
+    tiqav (0.0.6)
       addressable
       json
 
@@ -10,7 +10,6 @@ GEM
   specs:
     addressable (2.3.3)
     json (1.7.7)
-    json (1.7.7-java)
     minitest (4.7.0)
     rake (10.0.4)
 
